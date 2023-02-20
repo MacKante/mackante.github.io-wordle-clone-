@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="dark">
+    <div class="top-hr"><hr class="top-line"></div>
+    
+    <div class="top-sec">
+      <div class="fitem"></div>
+      <div class="fitem"></div>
+      <h1 class="fitem title">Wordle</h1>
+      <div class="fitem"></div>
+      <div class="fitem buttons">
+        <button class="dark-mode" onclick="dark()" onmousedown="event.preventDefault();">&#9681;</button>
+        <button class="hint" onclick="hint()" onmousedown="event.preventDefault();">&#63;</button>
+        <button class="instructions-button" onclick="instructions()" onmousedown="event.preventDefault();">&#9432;</button> 
+      </div>
+    </div>
+
+    <div class="middle-sec">
+      <div class="mid-fill"></div>
+      <div class="mid">
+        <div class="game-board">
+          <div class="game-fill"></div>
+          <div class="grid">
+            <!--row1-->
+            <div class="row">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>        
+            <!--row2-->
+            <div class="row">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+            <!--row3-->
+            <div class="row"> <!--row-->
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+            <!--row4-->
+            <div class="row">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+
+          <div class="win-gif instr-display"><img src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif"></div>
+
+          <div class="soButton">
+            <button class="start-over" onclick="startOver()" onmousedown="event.preventDefault();">Start-Over</button>
+          </div>
+
+          <div class="letter-box">
+            <h1 class="letter"></h1>
+          </div>
+        </div>
+
+        <div class="instruction instr-display">
+          <h2 class="instrHead">Instructions</h2>
+          <ul id="InfoList">
+            <li>Start typing. The letters will appear in the boxes</li>
+            <li>Remove letters with Backspace</li>
+            <li>Hit <strong>Enter</strong>/<strong>Return</strong> to submit an answer</li>
+            <li>Letters with a Purple Background are in the correct location</li>
+            <li>Letters with Yellow Background exist in the word, but are in the wrong spots</li>
+            <li>Letters with a Gray Background do not exist in the word</li>
+            <li>If you need a hint, click the <strong>?</strong> icon</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mid-fill"></div>
+      <div class="notify"></div>
+    </div>
+
+    <div class="bottom-sec">
+      <h4 class="author">Nathan Ante</h4>
+    </div>
+
+
+    <script src="./wordle.js"></script>
+  </body>
+</html>
